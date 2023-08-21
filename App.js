@@ -6,6 +6,8 @@ const App = () => {
     input1: '',
     input2: '',
     input3: '',
+    input4: '',
+    input5: '',
   
   });
   const [sum, setSum] = useState(0);
@@ -15,7 +17,7 @@ const App = () => {
   };
 
   const handleSum = () => {
-    const { input1, input2, input3 } = inputValues;
+    const { input1, input2, input3, input4, input5 } = inputValues;
     const result = parseInt(input1) + parseInt(input2) + parseInt(input3) + parseInt(input4) + parseInt(input5);
     setSum(result);
   };
@@ -43,6 +45,22 @@ const App = () => {
         style={styles.input}
         onChangeText={(value) => handleInputChange('input3', value)}
         value={inputValues.input3}
+        keyboardType="numeric"
+      />
+
+<Text style={styles.label}>Input 4:</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={(value) => handleInputChange('input4', value)}
+        value={inputValues.input4}
+        keyboardType="numeric"
+      />
+
+<Text style={styles.label}>Input 5:</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={(value) => handleInputChange('input5', value)}
+        value={inputValues.input5}
         keyboardType="numeric"
       />
 
